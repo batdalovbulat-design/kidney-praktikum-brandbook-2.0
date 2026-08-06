@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Components / Form input" subtitle="Underline inputs · square checks" viewport="700x220" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Form fields</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 32px; background: #fff; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 700px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .lbl { font-size: 12px; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.04em; font-weight: var(--w-bold); }
+  input, select {
+    font-family: var(--font-sans); font-size: 16px;
+    padding: 12px 0; border: 0; border-bottom: 1.5px solid #000; background: transparent; color: #000;
+    border-radius: 0; transition: border-color var(--dur-base) var(--ease);
+  }
+  input:focus, select:focus { outline: none; border-bottom-color: #F39C12; }
+  .check { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+  .box { width: 18px; height: 18px; border: 1.5px solid #000; flex: none; display: flex; align-items: center; justify-content: center; }
+  .box.on { background: #000; }
+  .box.on::after { content: ''; width: 8px; height: 4px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg) translate(1px,-1px); }
+</style>
+</head><body>
+<div class="field"><div class="lbl">Имя</div><input type="text" value="Магомедова Мадина"></div>
+<div class="field"><div class="lbl">Специализация</div><select><option>Педиатр</option></select></div>
+<div class="field"><div class="lbl">Телефон</div><input type="text" placeholder="+7 ___ ___ __ __"></div>
+<div class="field"><div class="check"><div class="box on"></div>Согласен с обработкой данных</div><div class="check"><div class="box"></div>Получать рассылку</div></div>
+</body></html>

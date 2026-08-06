@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Colors / Brand" subtitle="Black, white, orange, blue" viewport="700x160" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Colors — Brand</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fafafa; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .sw { background: var(--white); padding: 16px; }
+  .chip { width: 100%; height: 64px; margin-bottom: 12px; border: 1px solid var(--hairline); }
+  .name { font-weight: var(--w-bold); font-size: 14px; text-transform: uppercase; }
+  .hex  { font-size: 12px; color: var(--fg-muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+</style>
+</head><body>
+<div class="row">
+  <div class="sw"><div class="chip" style="background:#000"></div><div class="name">Black</div><div class="hex">#000000</div></div>
+  <div class="sw"><div class="chip" style="background:#fff;border:1px solid var(--hairline)"></div><div class="name">White</div><div class="hex">#FFFFFF</div></div>
+  <div class="sw"><div class="chip" style="background:#F39C12"></div><div class="name">Orange</div><div class="hex">#F39C12</div></div>
+  <div class="sw"><div class="chip" style="background:#1E3A8A"></div><div class="name">Blue · CTA</div><div class="hex">#1E3A8A</div></div>
+</div>
+</body></html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Components / Date pill" subtitle="Blue date · orange topic" viewport="700x200" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Date pills</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 32px; background: #fff; display: flex; gap: 32px; align-items: center; }
+  .pill {
+    width: 160px; height: 110px; border-radius: 50%;
+    color: #fff; font-weight: var(--w-bold); font-size: 22px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    line-height: 1.1; text-align: center;
+  }
+  .pill .small { font-size: 18px; font-weight: var(--w-regular); }
+  .blue { background: #1E3A8A; }
+  .orange { background: #F39C12; color: #000; }
+  .lbl { font-size: 11px; color: var(--fg-muted); text-transform: uppercase; margin-top: 8px; text-align: center; }
+  .col { display: flex; flex-direction: column; align-items: center; }
+</style>
+</head><body>
+  <div class="col"><div class="pill blue"><span class="small">Старт</span>24 июля</div><div class="lbl">Дата · синий</div></div>
+  <div class="col"><div class="pill blue"><span class="small">26 и</span>27 авг.</div><div class="lbl">Двухдневный</div></div>
+  <div class="col"><div class="pill orange"><span class="small">Курс</span>УЗД</div><div class="lbl">Тег · оранжевый</div></div>
+</body></html>

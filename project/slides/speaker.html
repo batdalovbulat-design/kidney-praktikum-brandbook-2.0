@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Slides" name="Slides / Speaker" subtitle="Header lockup · big name · oval portrait" viewport="1280x720" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Speaker slide</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;height:100%;background:#000;overflow:hidden;}
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  .slide{width:1920px;height:1080px;background:#F39C12;padding:72px 120px;box-sizing:border-box;
+    transform-origin:center center;position:relative;display:grid;
+    grid-template-rows:auto 1fr;grid-template-columns:1fr 1fr;gap:32px 80px;flex-shrink:0;}
+  .topbar{grid-column:1 / -1;display:flex;align-items:center;justify-content:space-between;}
+  .topbar img{height:80px;}
+  .lbl{display:flex;align-items:center;gap:16px;font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;}
+  .left{display:flex;flex-direction:column;justify-content:center;}
+  .left h2{font-size:140px;font-weight:900;line-height:.92;letter-spacing:-0.02em;text-transform:uppercase;margin:0;}
+  .role{font-size:30px;margin-top:32px;line-height:1.4;color:#000;max-width:560px;}
+  .meta{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:#000;margin-top:48px;font-weight:700;opacity:.7;}
+  .right{display:flex;justify-content:center;align-items:center;}
+  .photo{width:560px;height:680px;border-radius:50%;background:linear-gradient(135deg,#d8d8d8,#7f7f7f);}
+</style>
+</head><body><div class="stage"><div class="slide" id="slide">
+  <div class="topbar">
+    <img src="../assets/logo/logo_main.svg" alt="Кидней Практикум">
+    <div class="lbl">спикер
+      <svg width="80" height="14" viewBox="0 0 80 14"><line x1="0" y1="7" x2="68" y2="7" stroke="#000" stroke-width="2"/><polyline points="62,2 68,7 62,12" fill="none" stroke="#000" stroke-width="2"/></svg>
+    </div>
+  </div>
+  <div class="left">
+    <h2>Пыков<br>Михаил<br>Иванович</h2>
+    <div class="role">Профессор, д.м.н., кафедра лучевой диагностики РМАНПО. Автор учебника по детской ультразвуковой диагностике.</div>
+    <div class="meta">24 июля · 10:00 · конференц-зал клиники</div>
+  </div>
+  <div class="right"><div class="photo"></div></div>
+</div></div>
+<script>
+  function fit(){const W=innerWidth||document.documentElement.clientWidth;const H=innerHeight||document.documentElement.clientHeight;if(!W||!H)return requestAnimationFrame(fit);const k=Math.min(W/1920,H/1080);document.getElementById('slide').style.transform=`scale(${k})`;})`;}
+  fit();addEventListener('resize',fit);
+</script>
+</body></html>

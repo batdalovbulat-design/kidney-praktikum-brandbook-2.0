@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Posters / Lecture 4×5" subtitle="Instagram 4×5 lecture poster · matches Karimova reference" viewport="600x750" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Poster 4×5 — Lecture</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;height:100%;background:#000;overflow:hidden;font-family:var(--font-sans);}
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  .poster{width:1200px;height:1500px;flex-shrink:0;transform-origin:center;position:relative;overflow:hidden;
+    background: radial-gradient(95% 70% at 78% 25%, var(--orange-glow) 0%, rgba(244,163,59,0) 42%),
+                linear-gradient(155deg, #B7C0F5 0%, #5469FF 40%, #2236D8 100%);}
+  /* diagonal hairlines */
+  .poster::before{content:'';position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(122deg, transparent 49.85%, rgba(255,255,255,.18) 49.85% 50.05%, transparent 50.05%),
+      linear-gradient(58deg, transparent 64.85%, rgba(255,255,255,.18) 64.85% 65.05%, transparent 65.05%),
+      linear-gradient(58deg, transparent 79.85%, rgba(255,255,255,.18) 79.85% 80.05%, transparent 80.05%);}
+
+  h1{position:absolute;top:80px;left:80px;right:80px;font-size:108px;line-height:.98;font-weight:700;color:#000;letter-spacing:-0.02em;margin:0;}
+
+  .photo{position:absolute;top:520px;left:80px;width:430px;height:430px;border-radius:50%;
+    background:url('../assets/references/poster-karimova-4x5.jpg') center/cover #333;
+    filter:grayscale(1) contrast(1.05);}
+
+  .speaker{position:absolute;top:560px;left:580px;right:80px;color:#fff;}
+  .speaker .lab{font-size:30px;font-weight:400;margin-bottom:8px;}
+  .speaker .name{font-size:42px;font-weight:700;line-height:1.05;}
+  .speaker .role{font-size:26px;font-weight:400;margin-top:14px;line-height:1.35;max-width:520px;}
+
+  .lenses{position:absolute;top:980px;left:580px;width:520px;height:130px;}
+  .lenses circle{fill:#0E0E10;}
+
+  .topic{position:absolute;left:80px;top:1100px;width:430px;color:#000;font-size:30px;line-height:1.25;}
+
+  .price{position:absolute;left:580px;top:1180px;color:#fff;}
+  .price .lbl{font-size:26px;font-weight:400;margin-bottom:4px;}
+  .price .num{font-size:96px;font-weight:700;line-height:.95;letter-spacing:-0.02em;}
+
+  .when{position:absolute;left:80px;bottom:80px;color:#000;}
+  .when .big{font-size:44px;font-weight:700;letter-spacing:-0.01em;}
+  .when .sm{font-size:22px;margin-top:6px;color:rgba(0,0,0,.7);}
+
+  .logo{position:absolute;right:80px;bottom:80px;display:flex;align-items:center;gap:18px;color:#000;}
+  .logo svg{height:88px;width:auto;}
+  .logo .wm{font-size:30px;font-weight:700;line-height:1;letter-spacing:-0.01em;}
+  .logo .divider{position:absolute;left:-40px;top:0;bottom:0;width:1.5px;background:rgba(0,0,0,.55);}
+</style>
+</head><body><div class="stage"><div class="poster" id="p">
+  <h1>Практическая<br>лекция для врачей</h1>
+
+  <div class="photo"></div>
+
+  <div class="speaker">
+    <div class="lab">Спикер:</div>
+    <div class="name">Каримова Хадижат</div>
+    <div class="role">Кандидат медицинских наук,<br>врач-невролог, 19 лет опыта</div>
+  </div>
+
+  <svg class="lenses" viewBox="0 0 520 130">
+    <circle cx="65" cy="65" r="63"/><circle cx="195" cy="65" r="63"/>
+    <circle cx="325" cy="65" r="63"/><circle cx="455" cy="65" r="63"/>
+  </svg>
+
+  <div class="topic">От задержки развития к диагнозу и лечению детского церебрального паралича</div>
+
+  <div class="price"><div class="lbl">Стоимость участия</div><div class="num">5000 руб.</div></div>
+
+  <div class="when"><div class="big">30 ноября | 10:00</div><div class="sm">г. Махачкала, ул. Малыгина, 7</div></div>
+
+  <div class="logo"><div class="divider"></div><img src="../assets/logo/logo_main.svg" style="height:60px" alt="Кидней Практикум"></div>
+</div></div>
+<script>
+  function fit(){const W=innerWidth||document.documentElement.clientWidth;const H=innerHeight||document.documentElement.clientHeight;if(!W||!H)return requestAnimationFrame(fit);const k=Math.min(W/1200,H/1500);document.getElementById('p').style.transform=`scale(${k})`;})`;}
+  fit();addEventListener('resize',fit);
+</script>
+</body></html>

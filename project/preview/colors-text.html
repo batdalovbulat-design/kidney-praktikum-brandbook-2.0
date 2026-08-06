@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Colors / Text" subtitle="Primary, secondary, muted, on-color" viewport="700x160" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Colors — Text</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fafafa; font-family: var(--font-sans); }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .sw { background: var(--white); padding: 16px; border: 1px solid var(--hairline); }
+  .specimen { font-size: 28px; font-weight: 700; line-height: 1; margin-bottom: 6px; }
+  .sub { font-size: 13px; line-height: 1.4; }
+  .name { font-weight: var(--w-bold); font-size: 13px; text-transform: uppercase; margin-top: 12px; }
+  .hex  { font-size: 12px; color: #aaa; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .on-color { background:#F39C12; color:#fff; padding:14px; }
+</style>
+</head><body>
+<div class="grid">
+  <div class="sw">
+    <div class="specimen" style="color:#000">Спикер</div>
+    <div class="sub" style="color:#000">Пыков М.И., д.м.н.</div>
+    <div class="name">Primary</div><div class="hex">#000000</div>
+  </div>
+  <div class="sw">
+    <div class="specimen" style="color:#333">Спикер</div>
+    <div class="sub" style="color:#333">Пыков М.И., д.м.н.</div>
+    <div class="name">Secondary</div><div class="hex">#333333</div>
+  </div>
+  <div class="sw">
+    <div class="specimen" style="color:#777">Спикер</div>
+    <div class="sub" style="color:#777">Пыков М.И., д.м.н.</div>
+    <div class="name">Muted</div><div class="hex">#777777</div>
+  </div>
+  <div class="sw" style="padding:0">
+    <div class="on-color">
+      <div class="specimen">Старт</div>
+      <div class="sub">24 июля</div>
+    </div>
+    <div style="padding:12px 16px"><div class="name">On Color</div><div class="hex">#FFFFFF</div></div>
+  </div>
+</div>
+</body></html>

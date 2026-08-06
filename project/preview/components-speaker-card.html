@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Components / Speaker card" subtitle="Portrait + arrow + name" viewport="700x260" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Speaker card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; }
+  .card { width: 640px; background: #fff; padding: 24px; display: grid; grid-template-columns: 180px 1fr; gap: 24px; }
+  .photo { width: 160px; height: 200px; border-radius: 50%; background: linear-gradient(135deg,#cfcfcf,#9b9b9b); }
+  .label { font-size: 12px; color: var(--fg-2); display: flex; align-items: center; gap: 8px; margin-bottom: 8px; text-transform: lowercase; }
+  .label svg { display: inline-block; }
+  .name { font-size: 32px; font-weight: var(--w-bold); line-height: 1.05; text-transform: uppercase; }
+  .role { font-size: 14px; color: var(--fg-2); margin-top: 8px; max-width: 280px; }
+</style>
+</head><body>
+<div class="card">
+  <div class="photo"></div>
+  <div>
+    <div class="label">спикер
+      <svg width="48" height="10" viewBox="0 0 48 10"><line x1="0" y1="5" x2="40" y2="5" stroke="#000" stroke-width="1.5"/><polyline points="34,1 40,5 34,9" fill="none" stroke="#000" stroke-width="1.5"/></svg>
+    </div>
+    <div class="name">Пыков<br>Михаил Иванович</div>
+    <div class="role">Профессор РМАНПО, д.м.н., автор учебника по детской ультразвуковой диагностике</div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Slides" name="Slides / Stats" subtitle="Three large credentials numbers · header lockup" viewport="1280x720" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Stats slide</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;height:100%;background:#000;overflow:hidden;}
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  .slide{width:1920px;height:1080px;background:#fff;padding:80px 120px;box-sizing:border-box;
+    transform-origin:center center;position:relative;display:flex;flex-direction:column;gap:80px;flex-shrink:0;}
+  .topbar{display:flex;align-items:center;justify-content:space-between;}
+  .topbar img{height:80px;}
+  .topbar .kicker{font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#777;}
+  h2{font-size:96px;font-weight:900;line-height:.95;letter-spacing:-0.02em;text-transform:uppercase;margin:0;max-width:1400px;}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:64px;margin-top:auto;}
+  .stat{border-top:2px solid #000;padding-top:24px;}
+  .num{font-size:200px;font-weight:900;line-height:.9;letter-spacing:-0.03em;white-space:nowrap;}
+  .num small{font-size:88px;}
+  .lbl{font-size:24px;margin-top:16px;text-transform:uppercase;color:#333;letter-spacing:.04em;font-weight:700;}
+</style>
+</head><body><div class="stage"><div class="slide" id="slide">
+  <div class="topbar">
+    <img src="../assets/logo/logo_main.svg" alt="Кидней Практикум">
+    <div class="kicker">2018 — 2025</div>
+  </div>
+  <h2>Кидней Практикум<br>в цифрах</h2>
+  <div class="grid">
+    <div class="stat"><div class="num">576<small> ч.</small></div><div class="lbl">Программа УЗД</div></div>
+    <div class="stat"><div class="num">50+</div><div class="lbl">Мероприятий</div></div>
+    <div class="stat"><div class="num">2000+</div><div class="lbl">Участников</div></div>
+  </div>
+</div></div>
+<script>
+  function fit(){const W=innerWidth||document.documentElement.clientWidth;const H=innerHeight||document.documentElement.clientHeight;if(!W||!H)return requestAnimationFrame(fit);const k=Math.min(W/1920,H/1080);document.getElementById('slide').style.transform=`scale(${k})`;})`;}
+  fit();addEventListener('resize',fit);
+</script>
+</body></html>

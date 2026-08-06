@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Components / Speaker frame" subtitle="Circle, oval, oval-on-orange" viewport="700x260" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Speaker frame</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 32px; background: #fff; display: flex; gap: 48px; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .circle { width: 160px; height: 160px; border-radius: 50%; background: linear-gradient(135deg,#d0d0d0,#a8a8a8); }
+  .oval { width: 130px; height: 180px; border-radius: 50%; background: linear-gradient(135deg,#d0d0d0,#a8a8a8); }
+  .ph { width: 160px; height: 160px; background: #F39C12; display: flex; align-items: center; justify-content: center; }
+  .ph .inner { width: 130px; height: 150px; border-radius: 50%; background: linear-gradient(135deg,#e8e8e8,#b0b0b0); }
+  .lbl { font-size: 11px; color: var(--fg-muted); text-transform: uppercase; font-weight: var(--w-bold); }
+</style>
+</head><body>
+  <div class="col"><div class="circle"></div><div class="lbl">Circle 1:1</div></div>
+  <div class="col"><div class="oval"></div><div class="lbl">Vertical oval</div></div>
+  <div class="col"><div class="ph"><div class="inner"></div></div><div class="lbl">On orange tile</div></div>
+</body></html>

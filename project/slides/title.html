@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Slides" name="Slides / Title" subtitle="Eyebrow + giant uppercase headline + metadata strip" viewport="1280x720" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Title slide</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;height:100%;background:#000;overflow:hidden;}
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  .slide{width:1920px;height:1080px;background:#fff;padding:120px;box-sizing:border-box;
+    transform-origin:center center;position:relative;overflow:hidden;flex-shrink:0;}
+  .slide::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 78% 70%, rgba(243,156,18,.22), transparent 55%);pointer-events:none;}
+  .eyebrow{font-size:32px;color:#333;margin-bottom:24px;position:relative;}
+  h1{font-size:180px;font-weight:900;line-height:.92;letter-spacing:-0.02em;text-transform:uppercase;margin:0;position:relative;}
+  .meta{position:absolute;left:120px;bottom:120px;display:flex;gap:80px;font-size:24px;}
+  .meta b{display:block;font-size:14px;color:#777;text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:8px;}
+  .logo{position:absolute;right:120px;bottom:120px;height:80px;}
+</style>
+</head><body><div class="stage"><div class="slide" id="slide">
+  <div class="eyebrow">Двухнедельный курс · Старт 24 июля</div>
+  <h1>Вакцино-<br>профилактика</h1>
+  <div class="meta">
+    <div><b>Лектор</b>Магомедова<br>Мадина Гусейновна</div>
+    <div><b>Формат</b>10 дней теории<br>+ практика на приёме</div>
+    <div><b>Стоимость</b>22 500 ₽<br>с рассрочкой</div>
+  </div>
+  <img class="logo" src="../assets/logo/logo_main.svg" alt="">
+</div></div>
+<script>
+  function fit(){const W=innerWidth||document.documentElement.clientWidth;const H=innerHeight||document.documentElement.clientHeight;if(!W||!H)return requestAnimationFrame(fit);const k=Math.min(W/1920,H/1080);document.getElementById('slide').style.transform=`scale(${k})`;})`;}
+  fit();addEventListener('resize',fit);
+</script>
+</body></html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Pattern / Four lenses" subtitle="Signature graphic motif" viewport="700x200" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Four-lens pattern</title>
+<style>
+  body{margin:0;padding:32px;background:linear-gradient(135deg,#A9B4F2,#4F63FF);}
+  svg{display:block;}
+  .label{position:absolute;top:8px;left:32px;color:#fff;font:600 13px/1.2 system-ui;letter-spacing:.04em;text-transform:uppercase;}
+</style>
+</head><body>
+<div class="label">Pattern · 4 lenses</div>
+<svg width="640" height="200" viewBox="0 0 640 200" fill="none">
+  <defs>
+    <pattern id="p" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse">
+      <!-- one lens cell: circle + 4 corner-fillers that form rhombus negative space -->
+      <circle cx="80" cy="80" r="78" fill="#0E0E10"/>
+    </pattern>
+    <mask id="m">
+      <rect width="100%" height="100%" fill="#fff"/>
+    </mask>
+  </defs>
+  <!-- 4 lenses in a row, slightly overlapping so the rhombus negative space appears -->
+  <g fill="#0E0E10">
+    <circle cx="80" cy="100" r="80"/>
+    <circle cx="240" cy="100" r="80"/>
+    <circle cx="400" cy="100" r="80"/>
+    <circle cx="560" cy="100" r="80"/>
+  </g>
+</svg>
+</body></html>

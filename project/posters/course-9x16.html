@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Posters / Course 9×16" subtitle="Stories 9×16 course poster" viewport="540x960" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Poster 9×16 — Course</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;height:100%;background:#000;overflow:hidden;font-family:var(--font-sans);}
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  .poster{width:1080px;height:1920px;flex-shrink:0;transform-origin:center;position:relative;overflow:hidden;
+    background: radial-gradient(70% 50% at 50% 10%, var(--orange-glow) 0%, rgba(244,163,59,0) 50%),
+                linear-gradient(150deg, #B7C0F5 0%, #6076FF 45%, #3852EC 100%);}
+  .poster::before{content:'';position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(118deg, transparent 49.85%, rgba(255,255,255,.18) 49.85% 50.05%, transparent 50.05%),
+      linear-gradient(60deg, transparent 64.85%, rgba(255,255,255,.18) 64.85% 65.05%, transparent 65.05%);}
+
+  h1{position:absolute;top:120px;left:80px;right:80px;font-size:120px;line-height:.95;font-weight:700;color:#000;margin:0;letter-spacing:-0.02em;}
+  h1 em{font-style:normal;font-weight:400;display:block;font-size:70px;margin-top:8px;}
+
+  .photo{position:absolute;top:520px;left:120px;width:480px;height:480px;border-radius:50%;
+    background:url('../assets/references/poster-omarova-9x16.jpg') center/cover #333;
+    filter:grayscale(1) contrast(1.05);}
+
+  .feature{position:absolute;top:560px;right:80px;color:var(--charcoal);text-align:left;}
+  .feature .big{font-size:64px;font-weight:700;color:#1B1B1B;line-height:1;}
+  .feature .sm{font-size:36px;font-weight:400;color:#1B1B1B;margin-top:4px;}
+
+  .speaker{position:absolute;top:920px;right:80px;color:var(--charcoal);}
+  .speaker .lab{font-size:26px;}
+  .speaker .name{font-size:32px;font-weight:700;}
+
+  .when{position:absolute;left:80px;top:1180px;color:#1B1B1B;}
+  .when .big{font-size:80px;font-weight:700;letter-spacing:-0.01em;line-height:.95;}
+  .pill{position:absolute;left:80px;top:1320px;background:#F5F1EA;color:#1B1B1B;padding:14px 32px;border-radius:999px;font-weight:700;font-size:26px;}
+
+  .price{position:absolute;left:80px;top:1480px;color:#fff;}
+  .price .lbl{font-size:30px;color:var(--charcoal);font-weight:400;}
+  .price .num{font-size:130px;font-weight:700;line-height:.95;letter-spacing:-0.02em;color:#fff;}
+
+  .logo{position:absolute;left:80px;bottom:80px;display:flex;align-items:center;gap:14px;}
+  .logo img{height:60px;}
+</style>
+</head><body><div class="stage"><div class="poster" id="p">
+  <h1>Вакцинация<em>без иллюзий</em>
+  </h1>
+  <div style="position:absolute;top:380px;left:80px;color:var(--charcoal);font-size:34px;">Двухнедельный курс для медиков</div>
+
+  <div class="photo"></div>
+  <div class="feature"><div class="big">10 лекций</div><div class="sm">+ практика</div></div>
+
+  <div class="speaker">
+    <div class="lab">Спикер:</div>
+    <div class="name">Омарова Цибац<br>Шамиловна</div>
+  </div>
+
+  <div class="when"><div class="big">8 декабря&nbsp;&nbsp;|&nbsp;17:00</div></div>
+  <div class="pill">Онлайн/оффлайн</div>
+
+  <div class="price"><div class="lbl">Стоимость участия</div><div class="num">25 000 руб.</div></div>
+
+  <div class="logo"><img src="../assets/logo/logo_main.svg" alt="Кидней Практикум"></div>
+</div></div>
+<script>
+  function fit(){const W=innerWidth||document.documentElement.clientWidth;const H=innerHeight||document.documentElement.clientHeight;if(!W||!H)return requestAnimationFrame(fit);const k=Math.min(W/1080,H/1920);document.getElementById('p').style.transform=`scale(${k})`;})`;}
+  fit();addEventListener('resize',fit);
+</script>
+</body></html>

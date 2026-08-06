@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Posters / Lecture 16×9" subtitle="Landscape 16×9 lecture poster" viewport="1280x720" -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Poster 16×9 — Lecture</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;height:100%;background:#000;overflow:hidden;font-family:var(--font-sans);}
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  .poster{width:1920px;height:1080px;flex-shrink:0;transform-origin:center;position:relative;overflow:hidden;
+    background: radial-gradient(60% 70% at 80% 20%, var(--orange-glow) 0%, rgba(244,163,59,0) 40%),
+                linear-gradient(125deg, #B7C0F5 0%, #5469FF 50%, #3146E2 100%);}
+  .poster::before{content:'';position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(118deg, transparent 49.85%, rgba(255,255,255,.16) 49.85% 50.05%, transparent 50.05%),
+      linear-gradient(118deg, transparent 64.85%, rgba(255,255,255,.16) 64.85% 65.05%, transparent 65.05%);}
+
+  h1{position:absolute;top:80px;left:120px;font-size:88px;line-height:1;font-weight:700;color:#000;margin:0;letter-spacing:-0.02em;}
+  .logo{position:absolute;top:80px;right:120px;display:flex;align-items:center;gap:18px;}
+  .logo img{height:72px;}
+
+  .lenses{position:absolute;top:240px;right:120px;width:520px;height:120px;}
+  .lenses circle{fill:#0E0E10;}
+
+  .photo{position:absolute;left:160px;top:340px;width:380px;height:380px;border-radius:50%;
+    background:url('../assets/references/poster-karimova-16x9.jpg') 35% center/cover #333;
+    filter:grayscale(1) contrast(1.05);}
+
+  .topic{position:absolute;left:680px;top:380px;right:120px;color:#000;font-size:48px;line-height:1.2;font-weight:700;letter-spacing:-0.01em;
+    border-left:3px solid #fff;padding-left:36px;}
+
+  .pill{position:absolute;right:120px;top:680px;background:#F5F1EA;color:#1B1B1B;font-weight:700;font-size:26px;padding:14px 32px;border-radius:999px;}
+
+  .speaker{position:absolute;left:160px;bottom:80px;color:#0E0E10;}
+  .speaker .lab{font-size:22px;font-weight:400;margin-bottom:4px;}
+  .speaker .name{font-size:36px;font-weight:700;}
+  .speaker .role{font-size:18px;font-weight:400;margin-top:6px;color:rgba(0,0,0,.7);}
+
+  .price{position:absolute;left:780px;bottom:90px;color:#fff;}
+  .price .lbl{font-size:22px;font-weight:400;margin-bottom:4px;}
+  .price .num{font-size:72px;font-weight:700;line-height:.9;letter-spacing:-0.02em;}
+
+  .when{position:absolute;right:120px;bottom:90px;color:#000;text-align:right;}
+  .when .big{font-size:44px;font-weight:700;letter-spacing:-0.01em;}
+  .when .sm{font-size:18px;margin-top:6px;color:rgba(0,0,0,.7);}
+</style>
+</head><body><div class="stage"><div class="poster" id="p">
+  <h1>Практическая лекция<br>для врачей</h1>
+  <div class="logo"><img src="../assets/logo/logo_main.svg" alt="Кидней Практикум"></div>
+  <svg class="lenses" viewBox="0 0 520 120">
+    <circle cx="60" cy="60" r="58"/><circle cx="190" cy="60" r="58"/>
+    <circle cx="320" cy="60" r="58"/><circle cx="450" cy="60" r="58"/>
+  </svg>
+
+  <div class="photo"></div>
+  <div class="topic">От задержки развития к<br>диагнозу и лечению детского<br>церебрального паралича</div>
+  <div class="pill">Участие очно или онлайн</div>
+
+  <div class="speaker">
+    <div class="lab">Спикер:</div>
+    <div class="name">Каримова Хадижат Магомедовна</div>
+    <div class="role">Кандидат медицинских наук, врач-невролог, 19 лет опыта</div>
+  </div>
+  <div class="price"><div class="lbl">Стоимость участия</div><div class="num">5000 руб.</div></div>
+  <div class="when"><div class="big">30 ноября | 10:00</div><div class="sm">г. Махачкала, ул. Малыгина, 7</div></div>
+</div></div>
+<script>
+  function fit(){const W=innerWidth||document.documentElement.clientWidth;const H=innerHeight||document.documentElement.clientHeight;if(!W||!H)return requestAnimationFrame(fit);const k=Math.min(W/1920,H/1080);document.getElementById('p').style.transform=`scale(${k})`;})`;}
+  fit();addEventListener('resize',fit);
+</script>
+</body></html>
