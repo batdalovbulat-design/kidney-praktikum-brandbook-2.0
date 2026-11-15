@@ -1,0 +1,65 @@
+{
+  "family": "Roboto Condensed",
+  "copyright": "Copyright 2011 The Roboto Project Authors",
+  "license": "SIL Open Font License 1.1",
+  "licenseFile": "fonts/OFL.txt",
+  "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/robotocondensed/OFL.txt",
+  "cssSource": "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap",
+  "files": [
+    {
+      "path": "fonts/RobotoCondensed-Cyrillic.woff2",
+      "style": "normal",
+      "weightRange": "300 900",
+      "subset": "cyrillic",
+      "source": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19a7DRs5.woff2"
+    },
+    {
+      "path": "fonts/RobotoCondensed-Latin.woff2",
+      "style": "normal",
+      "weightRange": "300 900",
+      "subset": "latin",
+      "source": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2"
+    },
+    {
+      "path": "fonts/RobotoCondensed-Italic-Cyrillic.woff2",
+      "style": "italic",
+      "weightRange": "300 900",
+      "subset": "cyrillic",
+      "source": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVj2ZhZI2eCN5jzbjEETS9weq8-19eLCwM9UvI.woff2"
+    },
+    {
+      "path": "fonts/RobotoCondensed-Italic-Latin.woff2",
+      "style": "italic",
+      "weightRange": "300 900",
+      "subset": "latin",
+      "source": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVj2ZhZI2eCN5jzbjEETS9weq8-19eLDwM9.woff2"
+    }
+  ],
+  "additionalFamilies": [
+    {
+      "family": "Onest",
+      "scope": "Poster series only",
+      "copyright": "Copyright 2021 The Onest Project Authors (https://github.com/googlefonts/onest)",
+      "license": "SIL Open Font License 1.1",
+      "licenseFile": "fonts/OFL-Onest.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/onest/OFL.txt",
+      "cssSource": "https://fonts.googleapis.com/css2?family=Onest:wght@400..900&display=swap",
+      "files": [
+        {
+          "path": "fonts/Onest-Cyrillic.woff2",
+          "style": "normal",
+          "weightRange": "400 900",
+          "subset": "cyrillic",
+          "source": "https://fonts.gstatic.com/s/onest/v11/gNMKW3F-SZuj7xmb-HYoEoeyxMI.woff2"
+        },
+        {
+          "path": "fonts/Onest-Latin.woff2",
+          "style": "normal",
+          "weightRange": "400 900",
+          "subset": "latin",
+          "source": "https://fonts.gstatic.com/s/onest/v11/gNMKW3F-SZuj7xmf-HYoEoey.woff2"
+        }
+      ]
+    }
+  ]
+}

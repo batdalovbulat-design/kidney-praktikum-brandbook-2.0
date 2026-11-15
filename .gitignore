@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.env.*
+*.log
+node_modules/
+.od-skills/
+.od-frames/
+.file-versions/
+*.artifact.json
+.repo-update/

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astryx Composer — Kidney Praktikum Brandbook 2.0 Design System</title>
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="../ui_kits/app/astryx.css">
+  <style>
+    .preview { position: relative; }
+    .composer-demo { max-width: 760px; }
+    .composer-demo .astryx-composer { border: 1.5px solid var(--true-black); }
+    .saved-requests { display: grid; gap: var(--space-3); margin-top: var(--space-5); }
+    .saved-request { padding: var(--space-4); background: var(--cream); border: 1px solid var(--hairline); }
+    .saved-request p { margin: 0; overflow-wrap: anywhere; }
+    .empty-note { color: var(--fg-2); }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <header class="preview-header">
+      <div><p class="preview-kicker">Astryx · ChatComposer / Input / Drawer</p><h1 class="preview-title">Composer со slots и статусом</h1></div>
+      <span class="preview-index">14 / 14</span>
+    </header>
+    <p class="preview-note" style="margin-bottom:var(--space-5)">Enter сохраняет непустой запрос, Shift+Enter добавляет строку. Пустой запрос не отправляется. Отправка в CRM не имитируется.</p>
+    <div class="composer-demo">
+      <section class="astryx-composer" data-density="balanced" data-od-id="preview-composer">
+        <div class="astryx-composer-drawer">
+          <button class="astryx-disclosure" id="drawer-toggle" type="button" aria-expanded="false" aria-controls="drawer-content" data-od-id="composer-disclosure">Показать детали</button>
+          <div class="astryx-composer-drawer-content" id="drawer-content" hidden>
+            <p>Drawer содержит контекст запроса. Скрытая область недоступна клавиатурной навигации благодаря native hidden.</p>
+          </div>
+        </div>
+        <div class="astryx-composer-header"><span class="astryx-composer-course">Куратор программы</span></div>
+        <div class="astryx-composer-body">
+          <label class="sr-only" for="composer-input">Текст запроса</label>
+          <textarea class="astryx-composer-input" id="composer-input" rows="3" placeholder="Например: пришлите программу первичной переподготовки" data-od-id="composer-input"></textarea>
+        </div>
+        <div class="astryx-composer-footer">
+          <span class="astryx-composer-hint">Enter — сохранить · Shift+Enter — новая строка</span>
+          <button class="demo-button demo-button--orange" id="composer-send" type="button" disabled data-od-id="composer-send">Сохранить запрос</button>
+        </div>
+        <p class="astryx-composer-status astryx-composer-status--success" id="composer-status" aria-live="polite" hidden></p>
+      </section>
+      <div class="saved-requests" id="saved-requests">
+        <p class="empty-note" id="empty-note">Сохранённых запросов пока нет.</p>
+      </div>
+    </div>
+  </main>
+  <script>
+    const input = document.getElementById('composer-input');
+    const send = document.getElementById('composer-send');
+    const status = document.getElementById('composer-status');
+    const list = document.getElementById('saved-requests');
+    const emptyNote = document.getElementById('empty-note');
+    const drawerToggle = document.getElementById('drawer-toggle');
+    const drawerContent = document.getElementById('drawer-content');
+
+    const syncSend = () => { send.disabled = !input.value.trim(); };
+    const save = () => {
+      const text = input.value.trim();
+      if (!text) return;
+      const item = document.createElement('article');
+      item.className = 'saved-request';
+      const paragraph = document.createElement('p');
+      paragraph.textContent = text;
+      item.appendChild(paragraph);
+      list.appendChild(item);
+      emptyNote.hidden = true;
+      input.value = '';
+      syncSend();
+      status.textContent = 'Запрос сохранён локально. Отправка в CRM не подключена.';
+      status.hidden = false;
+    };
+
+    input.addEventListener('input', syncSend);
+    input.addEventListener('keydown', event => {
+      if (event.key === 'Enter' && !event.shiftKey && !event.isComposing) {
+        event.preventDefault();
+        save();
+      }
+    });
+    send.addEventListener('click', save);
+    drawerToggle.addEventListener('click', () => {
+      const open = drawerToggle.getAttribute('aria-expanded') !== 'true';
+      drawerToggle.setAttribute('aria-expanded', String(open));
+      drawerToggle.textContent = open ? 'Скрыть детали' : 'Показать детали';
+      drawerContent.hidden = !open;
+    });
+  </script>
+</body>
+</html>

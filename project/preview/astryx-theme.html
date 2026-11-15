@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astryx Theme — Kidney Praktikum Brandbook 2.0 Design System</title>
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .preview { position: relative; }
+    .theme-switch { display: flex; gap: var(--space-3); margin-bottom: var(--space-5); }
+    .theme-switch button { min-height: 44px; padding: var(--space-2) var(--space-4); border: 1.5px solid currentColor; background: transparent; color: inherit; font-weight: var(--w-bold); }
+    .theme-switch button[aria-pressed="true"] { background: var(--orange); color: var(--true-black); border-color: var(--orange); }
+    .demo-theme { padding: var(--space-6); border: 1.5px solid var(--true-black); background: var(--white); color: var(--black); transition: background var(--dur-base) var(--ease), color var(--dur-base) var(--ease); }
+    .demo-theme[data-theme="dark"] { background: var(--true-black); color: var(--white); }
+    .demo-theme-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-5); }
+    .demo-card { padding: var(--space-5); border: 1.5px solid currentColor; }
+    .demo-card h2 { margin: 0 0 var(--space-3); font-size: var(--t-h3); text-transform: uppercase; }
+    .demo-card p { margin: 0; color: inherit; }
+    .demo-theme[data-theme="dark"] .demo-muted { color: var(--fg-on-dark-muted); }
+    .demo-theme[data-theme="light"] .demo-muted { color: var(--fg-2); }
+    .demo-badge { display: inline-flex; margin-top: var(--space-4); padding: var(--space-2) var(--space-4); border-radius: var(--radius-pill); background: var(--blue); color: var(--white); font-weight: var(--w-bold); }
+    @media (max-width: 640px) { .demo-theme-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <header class="preview-header">
+      <div><p class="preview-kicker">Astryx · Theme / ThemeNested / ThemeSwitcher</p><h1 class="preview-title">Scoped theme без смены бренда</h1></div>
+      <span class="preview-index">13 / 14</span>
+    </header>
+    <p class="preview-note" style="margin-bottom:var(--space-5)">Переключение меняет только демонстрационную область. Глобальные токены и родительская тема не затрагиваются.</p>
+    <section class="demo-theme" id="demo-theme" data-theme="light" data-astryx-theme="praktikum-preview" data-od-id="astryx-theme-preview">
+      <div class="theme-switch" aria-label="Цветовой режим области">
+        <button type="button" data-theme-value="light" aria-pressed="true" data-od-id="theme-light">Светлая</button>
+        <button type="button" data-theme-value="dark" aria-pressed="false" data-od-id="theme-dark">Тёмная</button>
+      </div>
+      <div class="demo-theme-grid">
+        <article class="demo-card">
+          <h2>Root Praktikum</h2>
+          <p class="demo-muted">Белый или чёрный фон, оранжевый акцент, синий oval. Радиусы и типографика не меняются.</p>
+          <span class="demo-badge">24 июля</span>
+        </article>
+        <article class="demo-card" data-astryx-theme="nested-praktikum">
+          <h2>Nested Theme</h2>
+          <p class="demo-muted">Ближайший provider определяет режим только своей ветки. HTML-документ не получает новый data-theme.</p>
+          <span class="demo-badge">22 500 ₽</span>
+        </article>
+      </div>
+    </section>
+    <p class="prototype-note preview-section">Источник: `Theme.tsx`, `ThemeNested.tsx`, `ThemeSwitcher.tsx`. Стеклянный dock Astryx намеренно не переносится: бренд запрещает blur.</p>
+  </main>
+  <script>
+    const region = document.getElementById('demo-theme');
+    const buttons = document.querySelectorAll('[data-theme-value]');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        region.dataset.theme = button.dataset.themeValue;
+        buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button));
+      });
+    });
+  </script>
+</body>
+</html>
