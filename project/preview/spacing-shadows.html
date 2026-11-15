@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Линии и тени — Kidney Praktikum Brandbook 2.0 Design System</title>
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .preview { position: relative; }
+    .preview-header { flex-wrap: wrap; }
+    .preview-section { scroll-margin-top: var(--space-5); }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <header class="preview-header">
+      <div><p class="preview-kicker">Кидней.Практикум · плоская печать</p><h1 class="preview-title">Линии вместо глубины</h1></div>
+      <span class="preview-index">07 / 11</span>
+    </header>
+    <section aria-labelledby="flat-example">
+      <h2 class="preview-section-title" id="flat-example">По умолчанию</h2>
+      <article style="padding:var(--space-6);background:var(--cream);border-top:1.5px solid var(--true-black)">
+        <p class="preview-kicker">Без тени</p>
+        <h3 class="t-h2">Карточка курса</h3>
+        <p class="t-body" style="max-width:560px;color:var(--fg-2)">Контраст фона, типографики и одной линии заменяет декоративную глубину.</p>
+      </article>
+    </section>
+    <section class="preview-section" aria-labelledby="print-shadow">
+      <h2 class="preview-section-title" id="print-shadow">Редкие исключения для web</h2>
+      <div class="demo-row">
+        <article style="padding:var(--space-5);background:var(--white);box-shadow:var(--shadow-print);border:1px solid var(--true-black)">
+          <strong>Print hover</strong><br><span class="t-small">0 2px 0 #000000</span>
+        </article>
+        <article style="padding:var(--space-5);background:var(--white);box-shadow:var(--shadow-soft)">
+          <strong>Soft raised</strong><br><span class="t-small">0 1px 2px rgba(0,0,0,.06)</span>
+        </article>
+      </div>
+    </section>
+    <p class="prototype-note preview-section">Плоские блоки исходных <strong>CourseGrid</strong>, <strong>SiteFooter</strong> и <strong>EnrollForm</strong> не используют светящиеся тени, blur и стекло.</p>
+  </main>
+</body>
+</html>

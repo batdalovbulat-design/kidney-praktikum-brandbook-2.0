@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контрастная секция — Kidney Praktikum Brandbook 2.0 Design System</title>
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .preview { position: relative; }
+    .preview-header { flex-wrap: wrap; }
+    .dark-panel { scroll-margin-top: var(--space-5); }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <header class="preview-header">
+      <div><p class="preview-kicker">Кидней.Практикум · цвет</p><h1 class="preview-title">Чёрная секция записи</h1></div>
+      <span class="preview-index">03 / 11</span>
+    </header>
+    <section class="dark-panel" aria-labelledby="dark-title">
+      <p class="preview-kicker" style="color:var(--orange)">Записаться</p>
+      <h2 class="t-display" id="dark-title">Подайте заявку</h2>
+      <p class="t-body" style="max-width:560px;color:var(--fg-on-dark-muted)">Куратор перезвонит, пришлёт программу и реквизиты. Вторичный текст использует #BBBBBB для читаемости на чёрном.</p>
+      <div class="demo-row" style="margin-top:var(--space-6)">
+        <a class="demo-button demo-button--orange" href="components-inputs.html">Отправить заявку</a>
+        <span class="demo-pill">24 июля</span>
+      </div>
+    </section>
+    <section class="preview-section" aria-labelledby="dark-rules">
+      <h2 class="preview-section-title" id="dark-rules">Правила контраста</h2>
+      <div class="token-list">
+        <div class="token-row"><span class="token-name">Фон</span><span class="token-value">#000000</span><span>Форма записи и финальный CTA</span></div>
+        <div class="token-row"><span class="token-name">Основной текст</span><span class="token-value">#FFFFFF</span><span>Заголовки, поля, основной текст</span></div>
+        <div class="token-row"><span class="token-name">Вторичный текст</span><span class="token-value">#BBBBBB</span><span>Описания и юридический блок</span></div>
+        <div class="token-row"><span class="token-name">Действие</span><span class="token-value">#F39C12</span><span>Оранжевая кнопка с чёрным текстом</span></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

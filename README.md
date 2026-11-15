@@ -1,22 +1,62 @@
-# CODING AGENTS: READ THIS FIRST
+# Кидней.Практикум · Brandbook 2.0
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Переиспользуемая дизайн-система образовательного суббренда детской клиники «Кидней»: правила бренда, токены, исходные логотипы, локальные шрифты, постеры, превью, прикладные компоненты и доказательства источников.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+## Обновление пакета · 15 ноября 2026
 
-## What you should do — IMPORTANT
+В этом обновлении:
 
-**Find the primary design file under `design-system/project/` and read it top to bottom.** Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+- обновлены канонические правила бренда, токены и локальные Roboto Condensed и Onest с лицензиями OFL;
+- добавлены Astryx-компоненты: scoped themes, Layout и ChatLayout, composer, формы, оверлеи, таблицы, пресеты плотности и библиотека паттернов;
+- добавлена постерная студия с форматами 4:5, 9:16, 16:9 и 70×140 мм;
+- добавлены проверки вылетов, безопасных полей, текста, изображений и разрешения для печати;
+- собраны маркетинговые референсы с разбором аудитории, оффера, доверия и CTA;
+- расширены превью, исходные примеры и прикладной `ui_kits/app/` с 33 компонентами;
+- обновлены `DESIGN.md`, `SKILL.md`, `PROVENANCE.md`, манифесты и документация пакета.
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+Исходные постеры, слайды, изображения и материалы спикеров сохранены. Они не удаляются этим обновлением.
 
-## About the design files
+## С чего начать
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+| Назначение | Файл |
+| --- | --- |
+| Полное руководство и Preview Manifest | `project/README.md` |
+| Канонические правила бренда | `project/DESIGN.md` |
+| Инструкция для coding-агентов | `project/SKILL.md` |
+| Обзорная галерея системы | `project/system/index.html` |
+| Прикладной набор компонентов | `project/ui_kits/app/index.html` |
+| Редактор постеров | `project/preview/typography-campaign-editor.html` |
+| Маркетинговые референсы | `project/preview/typography-references.html` |
+| Исходные постеры | `project/posters/` |
+| Происхождение и ограничения | `project/PROVENANCE.md` |
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+Превью открываются как обычные HTML-файлы. Для прикладного `ui_kits/app/` используются React, ReactDOM и Babel Standalone из внешних CDN. Шрифты и фирменные активы хранятся локально.
 
-## Bundle contents
+## Состав пакета
 
-- `design-system/README.md` — this file
-- `design-system/project/` — the `Кидней Практикум Design System` project files (HTML prototypes, assets, components)
+- `project/DESIGN.md`, `colors_and_type.css`, `brand.json` — правила, токены и машинно-читаемые атрибуты бренда.
+- `project/assets/` — настоящие логотипы и исходные изображения.
+- `project/fonts/` — Roboto Condensed и Onest, лицензии и источники файлов.
+- `project/preview/` — карточки палитры, типографики, spacing, компонентов, Astryx и постерной студии.
+- `project/posters/`, `project/slides/` — исходные макеты брендбука.
+- `project/ui_kits/landing/` — исходные landing-компоненты.
+- `project/ui_kits/app/` — запускаемый модульный прикладной пример.
+- `project/source_examples/` — исходные компоненты и контракты для сравнения и повторного использования.
+- `project/system/` — зарегистрированная галерея, темы и производные токены.
+- `project/context/` — evidence notes и снимки источников.
+
+## Источники и права
+
+- Основа: исходный репозиторий `batdalovbulat-design/kidney-praktikum-brandbook-2.0`.
+- Astryx: композиционные и поведенческие паттерны, лицензия MIT сохранена в `project/source_examples/LICENSE-Astryx-MIT`.
+- Roboto Condensed и Onest: лицензии и ссылки находятся в `project/fonts/`.
+- Музейные и промоизображения сторонних событий не включены в публичный репозиторий. В `project/preview/typography-references.html` сохранены разборы и ссылки на официальные источники, а изображения показаны только из исходных материалов «Кидней.Практикум».
+- Демонстрационные даты, цены и программы перед публикацией нужно заменить актуальными бизнес-данными. Портреты реальных лекторов нельзя заменять сгенерированными людьми.
+
+## Статус проверки
+
+По последнему аудиту пакета: **0 ошибок**. Остаются **2 предупреждения** к структуре `project/README.md` и `project/ui_kits/app/README.md`; они зафиксированы в `project/PROVENANCE.md`.
+
+## Для coding-агентов
+
+Сначала прочитайте `project/SKILL.md`, затем `project/README.md` и `project/DESIGN.md`. Используйте сохранённые исходники и токены, не заменяйте их самодельной палитрой, другой гарнитурой или перерисованным логотипом.

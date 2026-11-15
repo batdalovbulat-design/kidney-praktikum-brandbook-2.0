@@ -1,0 +1,22 @@
+{
+  "colorPrimary": "#1E3A8A",
+  "colorSuccess": "#52c41a",
+  "colorWarning": "#F39C12",
+  "colorError": "#ff4d4f",
+  "colorInfo": "#1E3A8A",
+  "colorLink": "#1E3A8A",
+  "colorTextBase": "#0E0E10",
+  "colorBgBase": "#FFFFFF",
+  "fontFamily": "'Roboto Condensed', 'Arial Narrow', system-ui, sans-serif",
+  "fontFamilyCode": "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace",
+  "fontSize": 16,
+  "borderRadius": 0,
+  "sizeUnit": 4,
+  "sizeStep": 4,
+  "controlHeight": 48,
+  "lineWidth": 1,
+  "motionUnit": 0.1,
+  "motionBase": 0,
+  "wireframe": false,
+  "motion": true
+}

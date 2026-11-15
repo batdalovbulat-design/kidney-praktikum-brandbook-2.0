@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Основная палитра — Kidney Praktikum Brandbook 2.0 Design System</title>
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .preview { position: relative; }
+    .preview-header { flex-wrap: wrap; }
+    .swatch-value { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <header class="preview-header">
+      <div>
+        <p class="preview-kicker">Кидней.Практикум · цвет</p>
+        <h1 class="preview-title">Основная палитра</h1>
+      </div>
+      <span class="preview-index">01 / 11</span>
+    </header>
+    <section aria-labelledby="core-colors">
+      <h2 class="preview-section-title" id="core-colors">Рабочие роли</h2>
+      <div class="swatch-grid">
+        <article class="swatch" style="background:var(--white)">
+          <span class="swatch-name">White / фон</span><span class="swatch-value">#FFFFFF<br>Страницы и карточки</span>
+        </article>
+        <article class="swatch" style="background:var(--black);color:var(--white)">
+          <span class="swatch-name">Black / текст</span><span class="swatch-value">#0E0E10<br>Заголовки и текст</span>
+        </article>
+        <article class="swatch" style="background:var(--orange)">
+          <span class="swatch-name">Orange / акцент</span><span class="swatch-value">#F39C12<br>Акценты и карточки</span>
+        </article>
+        <article class="swatch" style="background:var(--blue);color:var(--white)">
+          <span class="swatch-name">CTA Blue</span><span class="swatch-value">#1E3A8A<br>Дата, цена, действие</span>
+        </article>
+        <article class="swatch" style="background:var(--cream)">
+          <span class="swatch-name">Cream / surface</span><span class="swatch-value">#F5EFE6<br>Альтернативные секции</span>
+        </article>
+        <article class="swatch" style="background:var(--true-black);color:var(--white)">
+          <span class="swatch-name">True Black</span><span class="swatch-value">#000000<br>Форма и финальные блоки</span>
+        </article>
+      </div>
+    </section>
+    <section class="preview-section" aria-labelledby="poster-colors">
+      <h2 class="preview-section-title" id="poster-colors">Только для постерной серии</h2>
+      <p class="preview-note">Синий градиент не становится фоном обычных интерфейсов.</p>
+      <div class="swatch-grid">
+        <article class="swatch" style="background:var(--blue-soft)"><span class="swatch-name">Blue Soft</span><span class="swatch-value">#A9B4F2</span></article>
+        <article class="swatch" style="background:var(--blue-bright)"><span class="swatch-name">Blue Bright</span><span class="swatch-value">#4F63FF</span></article>
+        <article class="swatch" style="background:var(--blue-deep);color:var(--white)"><span class="swatch-name">Blue Deep</span><span class="swatch-value">#2840E8</span></article>
+      </div>
+    </section>
+    <p class="prototype-note preview-section">Источник: <code>colors_and_type.css</code> и <code>README.md</code> репозитория. Красный родительской клиники и navy исключены из рабочей палитры.</p>
+  </main>
+</body>
+</html>

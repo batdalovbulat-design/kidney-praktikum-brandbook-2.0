@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Маркетинговые референсы — Kidney Praktikum Brandbook 2.0 Design System</title>
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .ref-lead {
+      max-width: 68ch;
+      margin: 0 0 var(--space-5);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .ref-criteria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin: 0 0 var(--space-6);
+      padding: 0;
+      list-style: none;
+    }
+
+    .ref-criteria li {
+      padding: var(--space-2) var(--space-3);
+      border: 1px solid var(--true-black);
+      border-radius: var(--radius-pill);
+      font-size: var(--t-small);
+      line-height: 1.3;
+    }
+
+    .ref-section {
+      margin-top: var(--space-8);
+      padding-top: var(--space-4);
+      border-top: 1.5px solid var(--true-black);
+    }
+
+    .ref-head {
+      display: grid;
+      grid-template-columns: 84px minmax(0, 1fr);
+      gap: var(--space-2) var(--space-4);
+      align-items: baseline;
+      margin-bottom: var(--space-5);
+    }
+
+    .ref-num {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 40px;
+      font-weight: var(--w-black);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .ref-num::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      flex: 0 0 auto;
+      background: var(--orange);
+    }
+
+    .ref-title {
+      margin: 0;
+      font-size: var(--t-h3);
+      font-weight: var(--w-bold);
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .ref-intro {
+      grid-column: 2;
+      margin: var(--space-2) 0 0;
+      max-width: 62ch;
+      color: var(--fg-2);
+      font-size: var(--t-small);
+      line-height: 1.5;
+    }
+
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-7) var(--space-5);
+      align-items: start;
+    }
+
+    .ref-card {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .ref-plate {
+      margin: 0;
+      padding: var(--space-3);
+      background: var(--cream);
+    }
+
+    .ref-plate img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .ref-tag {
+      align-self: flex-start;
+      padding: var(--space-1) var(--space-3);
+      border: 1px solid var(--true-black);
+      border-radius: var(--radius-pill);
+      font-size: var(--t-tiny);
+      font-weight: var(--w-bold);
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .ref-name {
+      margin: 0;
+      overflow-wrap: anywhere;
+      font-size: 24px;
+      font-weight: var(--w-bold);
+      line-height: 1.15;
+    }
+
+    .ref-meta {
+      margin: 0;
+      color: var(--fg-2);
+      font-size: var(--t-small);
+      line-height: 1.45;
+    }
+
+    .ref-notes {
+      display: grid;
+      grid-template-columns: minmax(104px, 0.28fr) minmax(0, 1fr);
+      gap: var(--space-2) var(--space-3);
+      margin: 0;
+      padding-top: var(--space-2);
+      border-top: 1px solid var(--hairline);
+    }
+
+    .ref-notes dt {
+      font-size: var(--t-tiny);
+      font-weight: var(--w-bold);
+      line-height: 1.45;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .ref-notes dd {
+      margin: 0 0 var(--space-2);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .ref-source {
+      margin: 0;
+      font-size: var(--t-small);
+      line-height: 1.4;
+    }
+
+    .ref-source a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .ref-source a:hover {
+      color: var(--orange);
+    }
+
+    .ref-source a:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    .ref-conclusion {
+      margin-top: var(--space-8);
+      padding: var(--space-6);
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .ref-conclusion h2 {
+      margin: 0 0 var(--space-4);
+      font-size: var(--t-h3);
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .ref-conclusion ol {
+      display: grid;
+      gap: var(--space-3);
+      margin: 0;
+      padding-left: var(--space-5);
+    }
+
+    .ref-conclusion li {
+      padding-left: var(--space-2);
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .ref-appendix .ref-grid {
+      gap: var(--space-5);
+    }
+
+    .ref-appendix .ref-name {
+      font-size: 18px;
+    }
+
+    .ref-appendix .ref-meta {
+      color: var(--fg-2);
+    }
+
+    @media (max-width: 760px) {
+      .ref-grid,
+      .ref-head {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ref-intro {
+        grid-column: 1;
+      }
+
+      .ref-num {
+        font-size: 32px;
+      }
+
+      .ref-conclusion {
+        padding: var(--space-5);
+      }
+    }
+
+    @media (max-width: 440px) {
+      .ref-notes {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--space-1);
+      }
+
+      .ref-notes dd {
+        margin-bottom: var(--space-3);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <header class="preview-header">
+      <div>
+        <p class="preview-kicker">Типографика · маркетинговые референсы</p>
+        <h1 class="preview-title">Что помогает продать участие</h1>
+      </div>
+      <span class="preview-index">22 / 22</span>
+    </header>
+
+    <p class="ref-lead">
+      Восемь реальных кампаний медицинских, образовательных и деловых событий.
+      Смотрим не только на форму: кого зовут, какой результат обещают, как подтверждают экспертность
+      и какое действие предлагают. Внизу оставлены четыре исходных постера «Кидней.Практикум» как приёмы формы.
+      В публичной версии внешние изображения не включены, официальные материалы открываются по ссылкам в карточках.
+    </p>
+
+    <ul class="ref-criteria" aria-label="Критерии разбора">
+      <li>Аудитория</li>
+      <li>Оффер</li>
+      <li>Доверие</li>
+      <li>Действие</li>
+      <li>Перенос в «Практикум»</li>
+    </ul>
+
+    <section class="ref-section" id="medical">
+      <div class="ref-head">
+        <span class="ref-num">01</span>
+        <h2 class="ref-title">Медицинское образование</h2>
+        <p class="ref-intro">
+          Прямая категория: врач выбирает программу, научную повестку и профессиональное сообщество.
+          Здесь важны конкретные темы, регалии и понятный путь к регистрации.
+        </p>
+      </div>
+
+      <div class="ref-grid">
+        <article class="ref-card">
+          <span class="ref-tag">До старта продаж</span>
+          <h3 class="ref-name">PAS Meeting 2027</h3>
+          <p class="ref-meta">Педиатрическая академическая встреча · исследования, abstracts и scholarly sessions</p>
+          <dl class="ref-notes">
+            <dt>Что продаёт</dt>
+            <dd>Участие в научной встрече педиатров. В навигации сразу видны программа, тезисы и scholarly sessions.</dd>
+            <dt>Маркетинговый ход</dt>
+            <dd>Отдельный сценарий «отметить в календаре» работает до открытия регистрации и не требует решения о покупке сразу.</dd>
+            <dt>Действие</dt>
+            <dd>Сохранить дату и перейти к материалам PAS 2027.</dd>
+            <dt>Перенять</dt>
+            <dd>До старта продаж выпускать плакат «Сохраните дату», после открытия записи менять его на «Записаться».</dd>
+            <dt>Чем отличиться</dt>
+            <dd>Назвать конкретную образовательную задачу врача, число академических часов и документ по итогам.</dd>
+          </dl>
+          <p class="ref-source"><a href="https://www.pas-meeting.org/2027-meeting/" target="_blank" rel="noopener noreferrer">Официальная страница PAS 2027</a></p>
+        </article>
+
+        <article class="ref-card">
+          <span class="ref-tag">Новизна программы</span>
+          <h3 class="ref-name">IDWeek 2026</h3>
+          <p class="ref-meta">21–24 октября 2026 · Вашингтон · инфекционные болезни</p>
+          <dl class="ref-notes">
+            <dt>Что продаёт</dt>
+            <dd>Доступ к последним научным данным и профессиональному сообществу специалистов по инфекционным болезням.</dd>
+            <dt>Маркетинговый ход</dt>
+            <dd>Формулировка «The Latest ID Breakthroughs are at Your Fingertips» превращает программу в причину приехать.</dd>
+            <dt>Доверие</dt>
+            <dd>Событие поддерживают профильные общества IDSA, SHEA, HIVMA и PIDS; их знаки видны на официальной странице.</dd>
+            <dt>Действие</dt>
+            <dd>Подписаться на новости о регистрации и программе либо спланировать поездку.</dd>
+            <dt>Перенять</dt>
+            <dd>Дату и место держать рядом с названием, а новизну раскрывать двумя-тремя конкретными темами программы.</dd>
+            <dt>Чем отличиться</dt>
+            <dd>Не обещать абстрактные «прорывы»: показать, какие клинические ситуации врач разберёт на занятиях.</dd>
+          </dl>
+          <p class="ref-source"><a href="https://www.idweek.org/" target="_blank" rel="noopener noreferrer">Официальная страница IDWeek</a></p>
+        </article>
+
+        <article class="ref-card">
+          <span class="ref-tag">Программа и спикеры</span>
+          <h3 class="ref-name">RSNA 2026</h3>
+          <p class="ref-meta">29 ноября – 3 декабря 2026 · Чикаго · радиология и лучевая диагностика</p>
+          <dl class="ref-notes">
+            <dt>Что продаёт</dt>
+            <dd>Обучение, научную программу и участие в мировом сообществе радиологов под темой «At the Center of Care».</dd>
+            <dt>Маркетинговый ход</dt>
+            <dd>От общей темы страница ведёт к Meeting Central, затем к пленарным спикерам с именами, датами и временем выступлений.</dd>
+            <dt>Доверие</dt>
+            <dd>Экспертность подтверждена конкретной афишей докладов, а практическая ценность раскрыта через обучение и приложение участника.</dd>
+            <dt>Действие</dt>
+            <dd>Зарегистрироваться или сначала изучить программу в Meeting Central.</dd>
+            <dt>Перенять</dt>
+            <dd>Дать два пути: «Записаться» для готовых и «Смотреть программу» для тех, кто ещё сравнивает.</dd>
+            <dt>Чем отличиться</dt>
+            <dd>Регалии лекторов не прятать в общий список: ставить их рядом с темой каждой лекции.</dd>
+          </dl>
+          <p class="ref-source"><a href="https://www.rsna.org/annual-meeting" target="_blank" rel="noopener noreferrer">Официальная страница RSNA 2026</a></p>
+        </article>
+
+        <article class="ref-card">
+          <span class="ref-tag">Ценность после события</span>
+          <h3 class="ref-name">ANESTHESIOLOGY</h3>
+          <p class="ref-meta">15–19 октября 2027 · Бостон · ежегодная конференция ASA</p>
+          <dl class="ref-notes">
+            <dt>Что продаёт</dt>
+            <dd>Обучение и контакты внутри специальности, а после конференции доступ к записям и материалам ASA PLUS.</dd>
+            <dt>Маркетинговый ход</dt>
+            <dd>Событие не заканчивается датой отъезда: записи, CME и годовая библиотека продлевают его образовательную ценность.</dd>
+            <dt>Доверие</dt>
+            <dd>На странице есть расписание, именной keynote-спикер, отзывы участников и отдельный вход в сессии.</dd>
+            <dt>Действие</dt>
+            <dd>Подписаться на новости следующей встречи, продолжить обучение или получить CME за прошедшую.</dd>
+            <dt>Перенять</dt>
+            <dd>Если у программы есть записи, заранее показывать срок доступа и что именно останется участнику.</dd>
+            <dt>Чем отличиться</dt>
+            <dd>Диплом установленного образца и регистрация в ФИС ФРДО должны быть видны до заявки, без обещания карьерного результата.</dd>
+          </dl>
+          <p class="ref-source"><a href="https://www.asahq.org/annualmeeting" target="_blank" rel="noopener noreferrer">Официальная страница ANESTHESIOLOGY</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ref-section" id="education">
+      <div class="ref-head">
+        <span class="ref-num">02</span>
+        <h2 class="ref-title">Образование и деловые события</h2>
+        <p class="ref-intro">
+          Смежная категория полезна механиками: сегментация тарифов, обоснование участия,
+          приглашение по профессиональной роли и отдельная обложка для распространения ссылки.
+        </p>
+      </div>
+
+      <div class="ref-grid">
+        <article class="ref-card">
+          <span class="ref-tag">Снятие возражения</span>
+          <h3 class="ref-name">SXSW EDU 2027</h3>
+          <p class="ref-meta">13–16 марта 2027 · Остин · конференция и фестиваль образования</p>
+          <dl class="ref-notes">
+            <dt>Что продаёт</dt>
+            <dd>Четыре дня сессий, мастерских, конкурсов и профессиональных контактов для людей, которые развивают образование.</dd>
+            <dt>Маркетинговый ход</dt>
+            <dd>Готовый шаблон «Convince your boss» помогает посетителю обосновать участие руководителю и отвечает на скрытое возражение.</dd>
+            <dt>Оффер</dt>
+            <dd>«One badge. All of SXSW EDU»: одна цена объединяет полный доступ и подробный состав участия.</dd>
+            <dt>Действие</dt>
+            <dd>Купить badge за $645 или сначала использовать аргументы для согласования.</dd>
+            <dt>Перенять</dt>
+            <dd>Для врача дать готовое обоснование участия: программа, часы, диплом и применимость тем в практике.</dd>
+            <dt>Чем отличиться</dt>
+            <dd>Не перечислять всё подряд: оставить одну программу, один понятный результат и один следующий шаг.</dd>
+          </dl>
+          <p class="ref-source"><a href="https://sxswedu.com/" target="_blank" rel="noopener noreferrer">Официальная страница SXSW EDU</a></p>
+        </article>
+
+        <article class="ref-card">
+          <span class="ref-tag">Тариф по задаче</span>
+          <h3 class="ref-name">SXSW 2027</h3>
+          <p class="ref-meta">15–21 марта 2027 · Остин · технологии, бизнес и креативные индустрии</p>
+          <dl class="ref-notes">
+            <dt>Что продаёт</dt>
+            <dd>Доступ к нескольким конференциям и фестивалям, а также к деловым контактам внутри разных профессиональных сообществ.</dd>
+            <dt>Маркетинговый ход</dt>
+            <dd>Platinum, Innovation, Film &amp; TV и Music различаются не декоративными названиями, а ролью участника и составом доступа.</dd>
+            <dt>Доверие</dt>
+            <dd>Цена, назначение тарифа и конкретные возможности показаны вместе. Отдельный ROI toolkit помогает обосновать расходы.</dd>
+            <dt>Действие</dt>
+            <dd>Выбрать badge по своей профессиональной задаче.</dd>
+            <dt>Перенять</dt>
+            <dd>Если есть очный и онлайн-форматы, развести их по составу участия, а не прятать разницу в примечании.</dd>
+            <dt>Чем отличиться</dt>
+            <dd>Не усложнять одиночный курс системой пакетов: выбор нужен только при реальной разнице в результате.</dd>
+          </dl>
+          <p class="ref-source"><a href="https://sxsw.com/" target="_blank" rel="noopener noreferrer">Официальная страница SXSW</a></p>
+        </article>
+
+        <article class="ref-card">
+          <span class="ref-tag">Приглашение по роли</span>
+          <h3 class="ref-name">Figma Config 2027</h3>
+          <p class="ref-meta">25–27 мая 2027 · Сан-Франциско и онлайн · люди, которые создают продукты</p>
+          <dl class="ref-notes">
+            <dt>Что продаёт</dt>
+            <dd>Практические знания о создании продуктов, новые инструменты и контакты с профессиональным сообществом.</dd>
+            <dt>Маркетинговый ход</dt>
+            <dd>Аудитория названа через её работу: «for people who build products». Человек узнаёт себя до списка тем и спикеров.</dd>
+            <dt>Доверие</dt>
+            <dd>75+ спикеров, 50+ сессий и прошлые доклады показывают масштаб и позволяют заранее оценить содержание.</dd>
+            <dt>Действие</dt>
+            <dd>На текущем этапе предлагается подать заявку спикером: у страницы одна кампания и один главный сценарий.</dd>
+            <dt>Перенять</dt>
+            <dd>Начинать с роли: «Для педиатров и УЗД-специалистов, которые хотят разобрать…», затем давать программу.</dd>
+            <dt>Чем отличиться</dt>
+            <dd>Не копировать визуальную геометрию Figma: переносим точность адресации, оформление оставляем фирменным.</dd>
+          </dl>
+          <p class="ref-source"><a href="https://config.figma.com/" target="_blank" rel="noopener noreferrer">Официальная страница Config</a></p>
+        </article>
+
+        <article class="ref-card">
+          <span class="ref-tag">Обложка для ссылки</span>
+          <h3 class="ref-name">Microsoft Build 2026</h3>
+          <p class="ref-meta">Профессиональная конференция разработчиков · официальная social card 1200 × 630 px</p>
+          <dl class="ref-notes">
+            <dt>Что продаёт</dt>
+            <dd>Переход на официальный хаб события через ссылку в соцсетях, мессенджерах и материалах партнёров.</dd>
+            <dt>Маркетинговый ход</dt>
+            <dd>Для распространения ссылки подготовлена отдельная горизонтальная карточка, а не автоматический кадр страницы.</dd>
+            <dt>Действие</dt>
+            <dd>Перейти на сайт Microsoft Build. На момент сбора страница находится в post-event состоянии, поэтому карточку оцениваем как формат, не как текущий оффер.</dd>
+            <dt>Перенять</dt>
+            <dd>Для каждой кампании делать отдельную обложку 1200 × 630 px: название, дата, спикер и действие не должны обрезаться в мессенджере.</dd>
+            <dt>Чем отличиться</dt>
+            <dd>В social card «Практикума» добавить конкретную программу и дату, чтобы ссылка продавала участие ещё до перехода.</dd>
+          </dl>
+          <p class="ref-source"><a href="https://build.microsoft.com/en-US/home" target="_blank" rel="noopener noreferrer">Официальная страница Microsoft Build</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ref-conclusion" aria-labelledby="conclusion-title">
+      <h2 id="conclusion-title">Что переносим в следующий постер</h2>
+      <ol>
+        <li>Одна аудитория, одна программа и одно главное действие на макете.</li>
+        <li>Тема и образовательный результат идут первыми, регалии лектора подтверждают обещание.</li>
+        <li>Дата, стоимость, число часов и диплом видны до заявки.</li>
+        <li>Постер, сторис и обложка ссылки проектируются отдельно под свой формат.</li>
+      </ol>
+    </section>
+
+    <section class="ref-section ref-appendix" id="form">
+      <div class="ref-head">
+        <span class="ref-num">03</span>
+        <h2 class="ref-title">Приёмы формы</h2>
+        <p class="ref-intro">
+          Четыре исходных постера из этого репозитория оставлены как справочник композиции.
+          Это материалы «Кидней.Практикум», доступные для дальнейшей работы с брендом.
+        </p>
+      </div>
+
+      <div class="ref-grid">
+        <article class="ref-card">
+          <figure class="ref-plate">
+            <img src="../assets/references/poster-karimova-4x5.jpg" width="2160" height="2700" loading="lazy"
+                 alt="Исходный постер «Каримова» из репозитория «Кидней.Практикум»">
+          </figure>
+          <h3 class="ref-name">Постер «Каримова»</h3>
+          <p class="ref-meta">Исходный материал брендбука · 4:5</p>
+          <p class="ref-meta"><strong>Приём:</strong> портрет лектора и информационная иерархия фирменной серии.</p>
+          <p class="ref-source"><a href="../assets/references/poster-karimova-4x5.jpg">Исходный файл</a></p>
+        </article>
+
+        <article class="ref-card">
+          <figure class="ref-plate">
+            <img src="../assets/references/poster-anemia-4x5.jpg" width="2160" height="2700" loading="lazy"
+                 alt="Исходный постер об анемии из репозитория «Кидней.Практикум»">
+          </figure>
+          <h3 class="ref-name">Постер «Анемия»</h3>
+          <p class="ref-meta">Исходный материал брендбука · 4:5</p>
+          <p class="ref-meta"><strong>Приём:</strong> образовательная тема, лектор и детали программы в единой композиции.</p>
+          <p class="ref-source"><a href="../assets/references/poster-anemia-4x5.jpg">Исходный файл</a></p>
+        </article>
+
+        <article class="ref-card">
+          <figure class="ref-plate">
+            <img src="../assets/references/poster-vaccino-cream.jpg" width="1080" height="1080" loading="lazy"
+                 alt="Исходный постер о вакцинологии в кремовой серии">
+          </figure>
+          <h3 class="ref-name">Вакцинология, кремовая серия</h3>
+          <p class="ref-meta">Исходный материал брендбука · квадрат</p>
+          <p class="ref-meta"><strong>Приём:</strong> кремовое поле, крупная типографика и фирменные овалы.</p>
+          <p class="ref-source"><a href="../assets/references/poster-vaccino-cream.jpg">Исходный файл</a></p>
+        </article>
+
+        <article class="ref-card">
+          <figure class="ref-plate">
+            <img src="../assets/references/dual-tile-orange.jpg" width="1055" height="582" loading="lazy"
+                 alt="Исходная двойная оранжевая композиция «Кидней.Практикум»">
+          </figure>
+          <h3 class="ref-name">Двойной оранжевый блок</h3>
+          <p class="ref-meta">Исходный материал брендбука · горизонтальный формат</p>
+          <p class="ref-meta"><strong>Приём:</strong> оранжевый акцент и парная композиция для серии носителей.</p>
+          <p class="ref-source"><a href="../assets/references/dual-tile-orange.jpg">Исходный файл</a></p>
+        </article>
+      </div>
+    </section>
+
+    <p class="prototype-note">
+      Внешние промоизображения не включены в публичный репозиторий. Разборы сохранены вместе
+      с рабочими ссылками на официальные источники. Изображения в приложении взяты из исходных
+      материалов этого репозитория. Полный локальный архив референсов и права описаны в <code>PROVENANCE.md</code>.
+    </p>
+  </main>
+</body>
+</html>

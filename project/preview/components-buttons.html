@@ -1,27 +1,51 @@
-<!DOCTYPE html>
-<!-- @dsCard group="Components" name="Components / Buttons" subtitle="Primary, secondary, CTA, accent" viewport="700x130" -->
-<html lang="ru"><head>
-<meta charset="utf-8">
-<title>Buttons</title>
-<link rel="stylesheet" href="../colors_and_type.css">
-<style>
-  body { margin: 0; padding: 32px; background: #fff; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-  .btn {
-    font-family: var(--font-sans); font-weight: var(--w-bold); font-size: 16px;
-    padding: 14px 28px; border: 0; cursor: pointer; transition: all var(--dur-base) var(--ease);
-  }
-  .primary { background: #000; color: #fff; }
-  .primary:hover { background: #F39C12; }
-  .secondary { background: #fff; color: #000; border: 1.5px solid #000; }
-  .secondary:hover { background: #000; color: #fff; }
-  .cta { background: #1E3A8A; color: #fff; border-radius: 999px; padding: 16px 32px; }
-  .cta:hover { background: #14296b; }
-  .accent { background: #F39C12; color: #000; }
-  .accent:hover { background: #E67E22; color: #fff; }
-</style>
-</head><body>
-  <button class="btn primary">Записаться</button>
-  <button class="btn secondary">Подробнее</button>
-  <button class="btn cta">Старт 24 июля</button>
-  <button class="btn accent">Все курсы</button>
-</body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кнопки и овалы — Kidney Praktikum Brandbook 2.0 Design System</title>
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .od-icon { width: var(--od-icon-size, 1em); height: auto; flex: none; }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <header class="preview-header">
+      <div><p class="preview-kicker">Компоненты · SiteHeader / EnrollForm / CourseCard</p><h1 class="preview-title">Кнопки и овалы</h1></div>
+      <span class="preview-index">08 / 11</span>
+    </header>
+    <section aria-labelledby="light-actions">
+      <h2 class="preview-section-title" id="light-actions">На светлом</h2>
+      <div class="demo-row">
+        <button class="demo-button" type="button">Подать заявку</button>
+        <button class="demo-button demo-button--secondary" type="button">Программа</button>
+        <button class="demo-button" type="button" disabled>Недоступно</button>
+      </div>
+    </section>
+    <section class="preview-section dark-panel" aria-labelledby="dark-actions">
+      <h2 class="preview-section-title" id="dark-actions">На чёрном</h2>
+      <div class="demo-row">
+        <button class="demo-button demo-button--orange" type="button">Отправить заявку</button>
+        <button class="demo-button" type="button" style="background:transparent;border-color:var(--white)">Подать ещё одну</button>
+      </div>
+    </section>
+    <section class="preview-section" aria-labelledby="pill-actions">
+      <h2 class="preview-section-title" id="pill-actions">Дата и цена</h2>
+      <div class="demo-row">
+        <span class="demo-pill">Старт 24 июля</span>
+        <span class="demo-pill">22 500 ₽</span>
+        <span class="pill">Онлайн</span>
+      </div>
+    </section>
+    <section class="preview-section" aria-labelledby="arrow-action">
+      <h2 class="preview-section-title" id="arrow-action">Тонкая стрелка</h2>
+      <a href="components-course-cards.html" style="display:inline-flex;align-items:center;gap:var(--space-3);color:var(--true-black);font-weight:var(--w-bold);text-decoration:none">
+        Все курсы
+        <svg class="od-icon" style="--od-icon-size:40px" viewBox="0 0 32 10" aria-hidden="true"><line x1="0" y1="5" x2="26" y2="5" stroke="currentColor" stroke-width="1.5"/><polyline points="22,1 26,5 22,9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,162 @@
+{
+  "name": "Kidney Praktikum Brandbook 2.0 Design System",
+  "tagline": "Кидней.Практикум — дополнительное профессиональное образование врачей",
+  "description": "Переиспользуемая система образовательного суббренда детской клиники Кидней: программы ДПО, лекции и конференции для педиатров, УЗД-специалистов и вакцинологов.",
+  "sourceUrl": "designmd://kidney-praktikum-brandbook-2-0",
+  "seed": {
+    "colorPrimary": "#1E3A8A",
+    "colorWarning": "#F39C12",
+    "colorInfo": "#1E3A8A",
+    "colorLink": "#1E3A8A",
+    "colorTextBase": "#0E0E10",
+    "colorBgBase": "#FFFFFF",
+    "fontFamily": "'Roboto Condensed', 'Arial Narrow', system-ui, sans-serif",
+    "fontSize": 16,
+    "borderRadius": 0,
+    "sizeUnit": 4,
+    "sizeStep": 4,
+    "controlHeight": 48,
+    "lineWidth": 1,
+    "motionUnit": 0.1,
+    "motionBase": 0,
+    "wireframe": false,
+    "motion": true
+  },
+  "logo": {
+    "primary": "assets/logo/logo_main.svg",
+    "alternates": [
+      "assets/logo/logo_main.png"
+    ],
+    "notes": "Original SVG and PNG copied byte-for-byte from the GitHub evidence snapshot. SVG viewBox: 40 310 720 180; PNG: 800x800."
+  },
+  "colors": [
+    {
+      "role": "background",
+      "hex": "#ffffff",
+      "oklch": "",
+      "name": "White",
+      "usage": "default page and card canvas"
+    },
+    {
+      "role": "foreground",
+      "hex": "#0e0e10",
+      "oklch": "",
+      "name": "Black",
+      "usage": "headings and body text"
+    },
+    {
+      "role": "accent",
+      "hex": "#f39c12",
+      "oklch": "",
+      "name": "Orange",
+      "usage": "brand emphasis and selected course cards"
+    },
+    {
+      "role": "surface",
+      "hex": "#f5efe6",
+      "oklch": "",
+      "name": "Cream",
+      "usage": "alternate sections and course cards"
+    },
+    {
+      "role": "muted",
+      "hex": "#333333",
+      "oklch": "",
+      "name": "Secondary text",
+      "usage": "readable secondary copy and metadata"
+    },
+    {
+      "role": "border",
+      "hex": "#000000",
+      "oklch": "",
+      "name": "True black",
+      "usage": "hairlines, arrows and contrast sections"
+    }
+  ],
+  "typography": {
+    "display": {
+      "family": "Roboto Condensed",
+      "fallbacks": [
+        "Arial Narrow",
+        "system-ui",
+        "sans-serif"
+      ],
+      "weights": [
+        300,
+        400,
+        700,
+        900
+      ]
+    },
+    "body": {
+      "family": "Roboto Condensed",
+      "fallbacks": [
+        "Arial Narrow",
+        "system-ui",
+        "sans-serif"
+      ],
+      "weights": [
+        300,
+        400,
+        700
+      ]
+    }
+  },
+  "voice": {
+    "adjectives": [
+      "экспертный",
+      "деловой",
+      "доказательный",
+      "конференционный"
+    ],
+    "tone": "Профессиональная коммуникация с врачом на равных: конкретные программы, точные регалии, даты, стоимость и образовательный результат без давления.",
+    "messagingPillars": [
+      "Дополнительное профессиональное образование врачей",
+      "Экспертность через точные регалии и организации спикеров",
+      "Подтверждённый результат: диплом установленного образца с регистрацией в ФИС ФРДО"
+    ],
+    "vocabulary": {
+      "use": [
+        "академические часы",
+        "диплом установленного образца",
+        "старт",
+        "лектор",
+        "цикл лекций"
+      ],
+      "avoid": [
+        "крутая лекция",
+        "не упусти",
+        "лучший в России",
+        "гарантируем работу",
+        "подарок к курсу"
+      ]
+    }
+  },
+  "imagery": {
+    "style": "Real business portraits in circular or vertical oval frames with a 1-2px black stroke; original geometric logo assets only.",
+    "subjects": [
+      "Practicum speakers",
+      "Кидней.Практикум logo"
+    ],
+    "treatment": "Color warm or neutral speaker portraits by default; B&W circles only inside the scoped poster series that explicitly requires them.",
+    "avoid": [
+      "rectangular speaker portraits",
+      "generated stand-ins for named people",
+      "Киди mascot",
+      "heart-kidney shapes",
+      "decorative medical pictograms"
+    ],
+    "samples": []
+  },
+  "layout": {
+    "radius": "0 and 999px; web-only 8px and 16px allowed by source but unused in the applied kit",
+    "borderWeight": "1-1.5px black or white",
+    "spacing": "4px base; 4, 8, 12, 16, 24, 32, 48, 64, 96px scale",
+    "postureRules": [
+      "Typography, ovals and thin arrows replace decorative iconography.",
+      "Course cards use white, cream or orange rectangular fields without soft shadows.",
+      "Dark enroll sections pair white text with orange actions and readable #BBBBBB secondary copy.",
+      "Speaker names and exact credentials remain fully readable."
+    ]
+  }
+}

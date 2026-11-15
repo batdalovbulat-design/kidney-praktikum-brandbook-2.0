@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astryx Layout — Kidney Praktikum Brandbook 2.0 Design System</title>
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="../ui_kits/app/astryx.css">
+  <style>
+    .preview { position: relative; }
+    .layout-switch { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-5); }
+    .layout-switch button { min-height: 44px; padding: var(--space-2) var(--space-4); border: 1.5px solid var(--true-black); background: var(--white); color: var(--true-black); font-weight: var(--w-bold); }
+    .layout-switch button[aria-pressed="true"] { background: var(--true-black); color: var(--white); }
+    .demo-note { margin: 0 0 var(--space-4); color: var(--fg-2); }
+    @media (max-width: 760px) { .astryx-layout { height: 640px; } }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <header class="preview-header">
+      <div><p class="preview-kicker">Astryx · LayoutSidebarLayout / LayoutDualPanelLayout</p><h1 class="preview-title">Sidebar и dual-panel</h1></div>
+      <span class="preview-index">12 / 14</span>
+    </header>
+    <p class="demo-note">Проверьте независимую прокрутку центральной области, выделение программы и переключение правой панели метаданных.</p>
+    <div class="layout-switch" aria-label="Режим layout">
+      <button type="button" aria-pressed="false" data-mode="sidebar" data-od-id="layout-mode-sidebar">Sidebar</button>
+      <button type="button" aria-pressed="true" data-mode="dual" data-od-id="layout-mode-dual">Dual panel</button>
+    </div>
+    <section class="astryx-layout" data-od-id="preview-astryx-layout">
+      <header class="astryx-layout-header"><h2 class="section-heading">Рабочая область программы</h2></header>
+      <div class="astryx-layout-body astryx-layout-body--dual" id="preview-layout-body">
+        <aside class="astryx-layout-panel astryx-layout-panel--start">
+          <nav class="astryx-program-nav" aria-label="Программы">
+            <p class="astryx-panel-label">Программы</p>
+            <button class="astryx-program-nav-item is-selected" type="button" aria-pressed="true"><span class="astryx-program-nav-type">Переподготовка</span><span class="astryx-program-nav-title">Ультразвуковая диагностика</span></button>
+            <button class="astryx-program-nav-item" type="button" aria-pressed="false"><span class="astryx-program-nav-type">Двухнедельный курс</span><span class="astryx-program-nav-title">Вакцинопрофилактика</span></button>
+            <button class="astryx-program-nav-item" type="button" aria-pressed="false"><span class="astryx-program-nav-type">Цикл лекций</span><span class="astryx-program-nav-title">Нейросонография</span></button>
+          </nav>
+        </aside>
+        <div class="astryx-layout-content">
+          <div class="astryx-chat-layout">
+            <div class="astryx-chat-messages">
+              <p class="eyebrow">Первичная переподготовка</p>
+              <h3 class="astryx-program-title">Ультразвуковая диагностика</h3>
+              <dl class="astryx-program-facts">
+                <div><dt>Длительность</dt><dd>576 часов</dd></div>
+                <div><dt>Старт</dt><dd>24 июля</dd></div>
+                <div><dt>Документ</dt><dd>Диплом ФИС ФРДО</dd></div>
+              </dl>
+              <p class="t-body" style="margin-top:var(--space-6);max-width:62ch">Центральная область прокручивается отдельно от навигации и footer. Это поведение повторяет Astryx LayoutBasicCardLayout и ChatLayout, но сохраняет плоский стиль «Кидней.Практикум».</p>
+              <p class="t-body" style="max-width:62ch">Кнопки программ имеют текстовое selected-состояние и aria-pressed. Дополнительные эффекты glass и blur не применяются.</p>
+              <p class="t-body" style="max-width:62ch">Контентная колонка сохраняет читаемую длину строки, а панели не перекрывают друг друга на мобильном.</p>
+            </div>
+            <div class="astryx-chat-dock"><div class="astryx-composer"><span class="astryx-composer-hint">Header + independent content + sticky composer</span></div></div>
+          </div>
+        </div>
+        <aside class="astryx-layout-panel astryx-layout-panel--end" id="preview-end-panel">
+          <p class="astryx-panel-label">Метаданные</p>
+          <p class="t-small">Лицензия Минобрнауки РД № Л035-01227-05/00665847.</p>
+          <p class="astryx-metadata-note">Правая панель скрывается в режиме Sidebar.</p>
+        </aside>
+      </div>
+      <footer class="astryx-layout-footer"><span class="astryx-layout-footer-note">Источник: Astryx Layout · токены «Кидней.Практикум»</span></footer>
+    </section>
+  </main>
+  <script>
+    const body = document.getElementById('preview-layout-body');
+    const endPanel = document.getElementById('preview-end-panel');
+    const buttons = document.querySelectorAll('[data-mode]');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const dual = button.dataset.mode === 'dual';
+        body.classList.toggle('astryx-layout-body--dual', dual);
+        endPanel.hidden = !dual;
+        buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button));
+      });
+    });
+  </script>
+</body>
+</html>

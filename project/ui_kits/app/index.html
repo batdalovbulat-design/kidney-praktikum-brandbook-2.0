@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Прикладной UI-kit Kidney Praktikum Brandbook 2.0 Design System: программы, запись и фирменные компоненты Кидней.Практикум.">
+  <title>Прикладной UI-kit — Kidney Praktikum Brandbook 2.0 Design System</title>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <link rel="stylesheet" href="../../colors_and_type.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="astryx.css">
+  <link rel="stylesheet" href="astryx-extended.css">
+  <link rel="stylesheet" href="poster.css">
+  <style>
+    #root { min-height: 100vh; }
+    body { background: var(--white); }
+    #root:empty::before { content: "Загрузка UI-kit"; display: block; padding: var(--space-6); color: var(--fg-2); }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <noscript>Для просмотра модульного UI-kit включите JavaScript.</noscript>
+  <script type="text/babel" src="components/SiteHeader.jsx"></script>
+  <script type="text/babel" src="components/Hero.jsx"></script>
+  <script type="text/babel" src="components/CourseGrid.jsx"></script>
+  <script type="text/babel" src="components/Stats.jsx"></script>
+  <script type="text/babel" src="components/AstryxDialog.jsx"></script>
+  <script type="text/babel" src="components/AstryxPopover.jsx"></script>
+  <script type="text/babel" src="components/AstryxDropdown.jsx"></script>
+  <script type="text/babel" src="components/AstryxSelector.jsx"></script>
+  <script type="text/babel" src="components/AstryxSegmentedControl.jsx"></script>
+  <script type="text/babel" src="components/AstryxBanner.jsx"></script>
+  <script type="text/babel" src="components/AstryxTable.jsx"></script>
+  <script type="text/babel" src="components/AstryxList.jsx"></script>
+  <script type="text/babel" src="components/AstryxDataViews.jsx"></script>
+  <script type="text/babel" src="components/AstryxDensity.jsx"></script>
+  <script type="text/babel" src="components/AstryxPatternLibrary.jsx"></script>
+  <script type="text/babel" src="components/AstryxFormsGallery.jsx"></script>
+  <script type="text/babel" src="components/AstryxTheme.jsx"></script>
+  <script type="text/babel" src="components/AstryxLayout.jsx"></script>
+  <script type="text/babel" src="components/AstryxChatLayout.jsx"></script>
+  <script type="text/babel" src="components/AstryxComposer.jsx"></script>
+  <script type="text/babel" src="components/AstryxWorkspace.jsx"></script>
+  <script type="text/babel" src="components/PosterCanvas.jsx"></script>
+  <script type="text/babel" src="components/PosterBlocks.jsx"></script>
+  <script type="text/babel" src="components/PrintCheck.jsx"></script>
+  <script type="text/babel" src="components/PosterCampaignEditor.jsx"></script>
+  <script type="text/babel" src="components/PosterStudio.jsx"></script>
+  <script type="text/babel" src="components/EnrollForm.jsx"></script>
+  <script type="text/babel" src="components/SiteFooter.jsx"></script>
+  <script type="text/babel" src="components/Sidebar.jsx"></script>
+  <script type="text/babel" src="components/AssistantsList.jsx"></script>
+  <script type="text/babel" src="components/MessageBubble.jsx"></script>
+  <script type="text/babel" src="components/ChatArea.jsx"></script>
+  <script type="text/babel" src="components/InputBar.jsx"></script>
+  <script type="text/babel" src="components/App.jsx"></script>
+  <script type="text/babel">
+    const { App } = window;
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

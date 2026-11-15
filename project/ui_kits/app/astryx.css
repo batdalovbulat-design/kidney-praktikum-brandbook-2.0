@@ -1,0 +1,431 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.astryx-theme {
+  display: contents;
+}
+
+.astryx-workspace-shell {
+  padding: var(--space-8) var(--space-8);
+  background: var(--cream);
+}
+
+.astryx-layout {
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid var(--true-black);
+  background: var(--white);
+  color: var(--black);
+}
+
+.astryx-layout-header,
+.astryx-layout-footer {
+  flex: none;
+  padding: var(--space-5) var(--space-6);
+}
+
+.astryx-layout-header {
+  border-bottom: 1.5px solid var(--true-black);
+}
+
+.astryx-layout-footer {
+  border-top: 1.5px solid var(--true-black);
+}
+
+.astryx-layout-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr);
+}
+
+.astryx-layout-body--dual {
+  grid-template-columns: 240px minmax(0, 1fr) 240px;
+}
+
+.astryx-layout-panel {
+  min-height: 0;
+  padding: var(--space-5);
+  overflow-y: auto;
+  background: var(--white);
+}
+
+.astryx-layout-panel--start {
+  border-right: 1.5px solid var(--true-black);
+}
+
+.astryx-layout-panel--end {
+  border-left: 1.5px solid var(--true-black);
+}
+
+.astryx-layout-content {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.astryx-layout-footer-note {
+  color: var(--fg-2);
+  font-size: var(--t-small);
+}
+
+.astryx-panel-label {
+  margin: 0 0 var(--space-3);
+  color: var(--fg-2);
+  font-size: 12px;
+  font-weight: var(--w-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.astryx-program-nav {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.astryx-program-nav-item {
+  width: 100%;
+  min-height: 48px;
+  display: block;
+  padding: var(--space-3);
+  border: 1px solid var(--hairline);
+  background: var(--white);
+  color: var(--black);
+  text-align: left;
+  transition: background var(--dur-base) var(--ease), color var(--dur-base) var(--ease), transform var(--dur-fast) var(--ease);
+}
+
+.astryx-program-nav-item:hover {
+  background: var(--cream);
+  color: var(--true-black);
+}
+
+.astryx-program-nav-item:active {
+  transform: translateY(1px);
+}
+
+.astryx-program-nav-item.is-selected {
+  border-color: var(--orange);
+  background: var(--orange);
+  color: var(--true-black);
+}
+
+.astryx-program-nav-type,
+.astryx-program-nav-title {
+  display: block;
+}
+
+.astryx-program-nav-type {
+  margin-bottom: var(--space-1);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.astryx-program-nav-title {
+  font-size: var(--t-body);
+  font-weight: var(--w-bold);
+  line-height: 1.25;
+}
+
+.astryx-chat-layout {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: var(--white);
+}
+
+.astryx-chat-messages {
+  flex: 1 0 auto;
+  padding: var(--space-6);
+}
+
+.astryx-chat-empty {
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  color: var(--fg-2);
+  text-align: center;
+}
+
+.astryx-chat-dock {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  flex: none;
+  border-top: 1.5px solid var(--true-black);
+  background: var(--white);
+}
+
+.astryx-program-title {
+  margin: 0;
+  font-size: clamp(32px, 4vw, var(--t-h1));
+  font-weight: var(--w-black);
+  line-height: 1.05;
+  letter-spacing: var(--track-display);
+  text-transform: uppercase;
+}
+
+.astryx-program-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-6) 0 0;
+}
+
+.astryx-program-facts > div {
+  padding-top: var(--space-3);
+  border-top: 1.5px solid var(--true-black);
+}
+
+.astryx-program-facts dt {
+  color: var(--fg-2);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.astryx-program-facts dd {
+  margin: var(--space-2) 0 0;
+  font-size: var(--t-body);
+  font-weight: var(--w-bold);
+}
+
+.astryx-metadata {
+  color: var(--fg-2);
+  font-size: var(--t-small);
+}
+
+.astryx-metadata-note {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--hairline);
+}
+
+.astryx-request-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-7) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.astryx-request {
+  padding: var(--space-4);
+  border: 1px solid var(--hairline);
+  background: var(--cream);
+}
+
+.astryx-request-program {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: 12px;
+  font-weight: var(--w-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.astryx-request p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.astryx-composer {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  background: var(--white);
+}
+
+.astryx-composer[data-density="compact"] {
+  padding: var(--space-3);
+}
+
+.astryx-composer[data-density="spacious"] {
+  padding: var(--space-6);
+}
+
+.astryx-composer-drawer {
+  margin-bottom: var(--space-3);
+}
+
+.astryx-disclosure {
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font-size: var(--t-small);
+  font-weight: var(--w-bold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.astryx-composer-drawer-content {
+  padding: var(--space-3) 0;
+  color: var(--fg-2);
+  font-size: var(--t-small);
+}
+
+.astryx-composer-header {
+  margin-bottom: var(--space-3);
+}
+
+.astryx-composer-course {
+  font-size: var(--t-small);
+  font-weight: var(--w-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.astryx-composer-body {
+  border: 1.5px solid var(--true-black);
+  background: var(--white);
+  transition: box-shadow var(--dur-base) var(--ease);
+}
+
+.astryx-composer-body:focus-within {
+  box-shadow: 0 0 0 3px var(--orange);
+}
+
+.astryx-composer-input {
+  width: 100%;
+  min-height: 96px;
+  display: block;
+  padding: var(--space-3);
+  border: 0;
+  background: transparent;
+  color: var(--black);
+  font-size: var(--t-body);
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.astryx-composer-input:focus {
+  outline: none;
+}
+
+.astryx-composer-input:disabled {
+  color: var(--fg-2);
+  cursor: not-allowed;
+}
+
+.astryx-composer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.astryx-composer-footer-actions {
+  min-width: 0;
+}
+
+.astryx-composer-hint {
+  display: block;
+  color: var(--fg-2);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.astryx-composer-status {
+  margin: var(--space-3) 0 0;
+  padding: var(--space-3);
+  border: 1px solid var(--hairline);
+  font-size: var(--t-small);
+}
+
+.astryx-composer-status--success {
+  border-color: var(--orange);
+  background: var(--orange);
+  color: var(--true-black);
+}
+
+.astryx-composer-status--error {
+  border-color: var(--true-black);
+  background: var(--true-black);
+  color: var(--orange);
+}
+
+.astryx-empty-copy {
+  max-width: 420px;
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .astryx-layout-body--dual {
+    grid-template-columns: 220px minmax(0, 1fr) 200px;
+  }
+
+  .astryx-layout-body {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  .astryx-layout-panel {
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 760px) {
+  .astryx-workspace-shell {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .astryx-layout {
+    height: auto;
+  }
+
+  .astryx-layout-body,
+  .astryx-layout-body--dual {
+    display: block;
+  }
+
+  .astryx-layout-panel {
+    overflow: visible;
+  }
+
+  .astryx-layout-panel--start {
+    border-right: 0;
+    border-bottom: 1.5px solid var(--true-black);
+  }
+
+  .astryx-layout-panel--end {
+    border-top: 1.5px solid var(--true-black);
+    border-left: 0;
+  }
+
+  .astryx-layout-content {
+    overflow: visible;
+  }
+
+  .astryx-chat-layout {
+    overflow: visible;
+  }
+
+  .astryx-chat-dock {
+    position: static;
+  }
+
+  .astryx-program-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .astryx-composer-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .astryx-composer-footer .button {
+    width: 100%;
+  }
+}
